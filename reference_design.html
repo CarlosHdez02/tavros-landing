@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tauros - Strength Training &amp; Bodybuilding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#D4AF37", // Metallic Gold
+                    "primary-light": "#E5C565",
+                    "background-dark": "#000000", // Pure black for Apple premium feel
+                    "surface-dark": "#111111", // Slightly lighter black
+                    "surface-card": "#161617", // Apple dark grey
+                    "text-light": "#F5F5F7", // Apple off-white
+                    "text-muted": "#86868B", // Apple grey text
+                },
+                fontFamily: {
+                    display: ["Cinzel", "serif"],
+                    sans: ["Inter", "sans-serif"], // Clean sans-serif
+                    heading: ["Manrope", "sans-serif"], // Modern headings
+                },
+                backgroundImage: {
+                    'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%)',
+                },
+                backdropBlur: {
+                    xs: '2px',
+                }
+            },
+        },
+    };
+</script>
+<style type="text/tailwindcss">
+    @layer utilities {
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+        }
+        .apple-glass {
+            @apply bg-[#1D1D1F]/70 backdrop-blur-xl border border-white/10;
+        }
+        .apple-button {
+            @apply rounded-full px-8 py-3 text-sm font-medium transition-all duration-300 transform hover:scale-105 active:scale-95;
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    }
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body class="bg-background-dark text-text-light font-sans antialiased selection:bg-primary/30 selection:text-white">
+<nav class="fixed w-full z-50 top-0 transition-all duration-300">
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-md border-b border-white/5"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="h-10 w-10 relative overflow-hidden rounded-full border border-white/10 group-hover:border-primary/50 transition-colors">
+<img alt="Tauros Logo Icon" class="object-cover h-full w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn4olzki5MOeMJwB2Lt74M3bJ5MDkJLiaUPIBv-IiUXyUnsusGk1becrUN3hR73Xa_E0mUaIrCb7BvwEYh2ex-5TwPB8vpUD8bfHGFdQDNr8dZZ7ByGuTWAykzzLYllIKyac-Vg0VYt6_QShte0tJz66t8UCzCseFKLZyA5Ou9rjMtxqnKMBzNhWGh5hFO77l_B6dA4Alb_PemQVmSq0MzT15DiuLKUBzAGiYdav3O5qpzbpBQP6oeRbMJEFlgn6Y72YjIACGp7t1S"/>
+</div>
+<span class="font-display font-medium text-xl tracking-[0.15em] text-white group-hover:text-primary transition-colors">TAUROS</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-xs font-medium tracking-widest text-text-muted hover:text-white transition-colors uppercase" href="#programs">Programs</a>
+<a class="text-xs font-medium tracking-widest text-text-muted hover:text-white transition-colors uppercase" href="#facilities">Facilities</a>
+<a class="text-xs font-medium tracking-widest text-text-muted hover:text-white transition-colors uppercase" href="#success">Stories</a>
+<a class="bg-white text-black hover:bg-primary transition-colors rounded-full px-6 py-2 text-xs font-semibold uppercase tracking-wider" href="#contact">
+                    Join Now
+                </a>
+</div>
+<div class="flex md:hidden">
+<button class="text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Gym background" class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrxvtL0uZop_MSfajbOqYuhAvyMg3FVPx_1t74nAWhjD82kPJn6lLyOnC1eJClasYgBrHE9VXEFyVNQep8zzItntoG65G38OxW8xPxovQTK55IhaKTXssVm8Nyu0044mZCBQub43--cQnEkMzlUhoVloI26r5C6lkpGAa9rjf5UG-xa9w4RMSYgWLomcIEjG5X_HKOcriu_5AJfQf6ollmT16LZcBIGkAZ_YF7TnEU4A0LFRgAru-NAVxDnHfQOErPMzL2Zq_D79MJ"/>
+<div class="absolute inset-0 bg-black/60"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-black/40"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center">
+<h1 class="fade-in-up text-5xl md:text-7xl lg:text-8xl font-heading font-medium text-white mb-6 tracking-tight leading-none">
+            Forge Your <span class="text-gradient-gold italic font-display">Legacy</span>
+</h1>
+<p class="fade-in-up delay-100 mt-4 max-w-xl mx-auto text-lg md:text-xl text-text-muted font-light leading-relaxed">
+            Elite strength training. Uncompromising luxury.<br class="hidden md:block"/> Defines the standard for excellence.
+        </p>
+<div class="fade-in-up delay-200 mt-10 flex flex-col sm:flex-row justify-center gap-4">
+<button class="apple-button bg-white text-black hover:bg-gray-200">
+                Begin Journey
+            </button>
+<button class="apple-button bg-white/10 text-white backdrop-blur-md hover:bg-white/20 border border-white/10">
+                Explore Club
+            </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/20 animate-bounce">
+<span class="material-symbols-outlined text-3xl font-light">keyboard_arrow_down</span>
+</div>
+</div>
+<section class="py-32 bg-background-dark relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start mb-24">
+<div>
+<span class="text-primary font-bold text-xs tracking-[0.2em] uppercase block mb-6">Our Philosophy</span>
+<h3 class="text-4xl md:text-5xl font-heading text-white leading-tight font-medium">
+                    More Than Iron.<br/>
+<span class="text-text-muted">A Sanctuary.</span>
+</h3>
+</div>
+<div>
+<p class="text-text-muted text-lg font-light leading-relaxed">
+                    We believe the gym is a temple for self-improvement. Combining time-tested methodologies with sports science in an environment of pure focus. Designed for those who seek results, not distractions.
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group p-8 rounded-3xl bg-surface-card hover:bg-surface-dark transition-all duration-500 border border-white/5 hover:border-white/10">
+<div class="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-2xl">fitness_center</span>
+</div>
+<h4 class="text-xl font-heading font-medium text-white mb-3">Old School Grit</h4>
+<p class="text-text-muted text-sm leading-relaxed">
+                    Free weights and hard work. No gimmicks, just proven methods that build raw, functional strength.
+                </p>
+</div>
+<div class="group p-8 rounded-3xl bg-surface-card hover:bg-surface-dark transition-all duration-500 border border-white/5 hover:border-white/10">
+<div class="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-2xl">science</span>
+</div>
+<h4 class="text-xl font-heading font-medium text-white mb-3">Modern Science</h4>
+<p class="text-text-muted text-sm leading-relaxed">
+                    Biomechanics and nutritional science to optimize hypertrophy, recovery, and longevity.
+                </p>
+</div>
+<div class="group p-8 rounded-3xl bg-surface-card hover:bg-surface-dark transition-all duration-500 border border-white/5 hover:border-white/10">
+<div class="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<h4 class="text-xl font-heading font-medium text-white mb-3">Elite Community</h4>
+<p class="text-text-muted text-sm leading-relaxed">
+                    Join ambitious individuals pushing each other to surpass limits and achieve greatness.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-surface-dark relative" id="programs">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="text-center mb-24">
+<h2 class="text-3xl md:text-5xl font-heading font-medium text-white mb-4">Training by Stage</h2>
+<p class="text-text-muted max-w-2xl mx-auto text-lg font-light">Precision programming for every biological milestone.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="relative group h-[600px] rounded-2xl overflow-hidden cursor-pointer">
+<img alt="Teen Training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-MRD7TNKEvNvsRE8nPJrz3ERGWR6pxtypKcyyq9o-S8HCZosrdDLFV7Y5FX4h_nOtx2JyYzhHVXx1Rn2veTu2e8gXEZRk8i_BZ_kJkgpcwXs1dL9u1eTGrO8ZV3rpum7CWSfu-sphiFpwWbwlaWBmJNW_nkzpnS0Vkv5HCHJLjnEy0iZiu-pmDRDJvpyc_8DWWM_fh_D_Y6V_6rQsxissSqzKRW7ar_NMjX9pbOI8adXSkohyp_sYbhm_hZsZ37eUik1Jc-q4DABb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-20">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase mb-2 block">Ages 14-19</span>
+<h3 class="text-white text-2xl font-heading font-medium mb-2">Junior</h3>
+<p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Foundation &amp; Mastery</p>
+</div>
+</div>
+<div class="relative group h-[600px] rounded-2xl overflow-hidden cursor-pointer">
+<img alt="Adult Training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrVNrdlFQt-NEWTEheGDuMcf3XqhCRissLOGFywirfGnwBHw2wINpn23UlFqrjhSyzezf7Q_Dm_NEup4dmbX6a_GHCVVvFLTeZ3_rFDSobK4EFVJMxRutYSjfmyTpIAtGp_ScVIgON-dIOmBRe51upcbTIt0rfvagN5ucxlW2spgpxXHdblUibBgEHolflOnPN6xVylsm_YAR_1Qu-ryGqv4cI12qICrv-jkaCPDPGd7SHsOCnbmJEH7W-L1G7O2tuKxLR43nxSvHg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-20">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase mb-2 block">Ages 20-39</span>
+<h3 class="text-white text-2xl font-heading font-medium mb-2">Prime</h3>
+<p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Performance &amp; Aesthetics</p>
+</div>
+</div>
+<div class="relative group h-[600px] rounded-2xl overflow-hidden cursor-pointer">
+<img alt="Masters Training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsjFycEysLmJR5YvaYnK8d28soCDXdHo2a3AoGDfg8c6HqQYXNC--amzJzgsyBrvjMnW0dDP2hfBpz82LUgGl5mlzMj2bLR5-nVfUPOm3YRCUwxPT3kzv1WjO_GHZgw5gkqkUOH61ZaWNuu8uV7Qjk_MBNUujXV5Oo785VaZpPRLSNopAH_fZ80BCOdn-DsihW44fA0d1ySHjjjnI6nRyAXCmwBxv_-ceLy0R0os3PuXcuGZWlz-EnuzG047Wa8xo6zr9UorD8yK7c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-20">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase mb-2 block">Ages 40-59</span>
+<h3 class="text-white text-2xl font-heading font-medium mb-2">Masters</h3>
+<p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Strength &amp; Longevity</p>
+</div>
+</div>
+<div class="relative group h-[600px] rounded-2xl overflow-hidden cursor-pointer">
+<img alt="Senior Training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6geQn5IUgvfm5TbaSKpdz6ZtxkICbKkI73xuKyj1IImSxqn20erHSd81pyaS8C0FUbg9Ltlv0tc6TrceZOJ2mN5qwT6OBGXaRO59tXLqtFeQl-IRqcihf3Q2saozh6SF7h7of1MDanhU6WLJ9BcGw1WE-CgZBBP_oVCS8jXIf8I9Gd7puTzKKEbOwSwiyhVa8FjgpPHEsErn6RgEVnXHDLq0hx4_SirisNAnaTyZFZTAVwvdIXohQzUT5C3YOW9l8jR5OBEU91qhe"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-20">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase mb-2 block">Ages 60+</span>
+<h3 class="text-white text-2xl font-heading font-medium mb-2">Vitality</h3>
+<p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Mobility &amp; Function</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-dark" id="facilities">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div>
+<span class="text-primary font-bold text-xs tracking-[0.2em] uppercase mb-4 block">The Environment</span>
+<h3 class="text-4xl md:text-5xl font-heading font-medium text-white">World Class Facilities</h3>
+</div>
+<a class="hidden md:inline-flex items-center gap-2 text-text-muted hover:text-white transition-colors text-sm font-medium mt-8 md:mt-0" href="#">
+                View Gallery <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-[700px]">
+<div class="md:col-span-1 relative rounded-3xl overflow-hidden group">
+<img alt="Main gym floor" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUdKizKeF68RGomrjRCHEvQAhdytKwLVryjz6n1UAWh4MVo6AAtz9N-Rt_to_2s88LkBACj0vQcm50szBlKJSOeRYJlP1hTF8ixoQCEnOwt7HEC_iuepotZTUTjb-lkWBA2EaPs2OdYg42koC__7uOP5H826mWV4Xt9QS0WgPYOK9bDcd5tMUQZbmG72f7Yv0_sQa0ZJI4RsS63-ccgQkSZM_NxJl2mw0cSGC0pPNWaCEHpbgsVVDOSyQ45F4LkLMUfKgEQglZ5mcJ"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-8 left-8">
+<h4 class="text-white text-2xl font-heading">The Iron Sanctuary</h4>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-6">
+<div class="relative rounded-3xl overflow-hidden group">
+<img alt="Dumbbell rack" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1TAXdHjoRF3tSa4p7ZD6q4pZKkkz0_xOkPbmMjGt_ECbZQ2aihAq1LtaTw4PHmOYlSsdV2xH-NwiLvvibSfqY3uAT5adDgFofRFDnBFR6xOBgbqqnKtiUW9LxrsgBsAapWTXojAwJcCdFcV3tN4G5yUH7SmS_xvDlo6U80qUId5Z_hPje_GFby6GyVdotiRIAqsBG-K3rFggYlDwX6UNYu_X0SZXlKXw8dIwkrkfSO6-rUjXvKUrChVfl4pv9OCWH_9aMOoaKYgnz"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-8 left-8">
+<h4 class="text-white text-xl font-heading">Dumbbell Sector</h4>
+</div>
+</div>
+<div class="relative rounded-3xl overflow-hidden group">
+<img alt="Power lifting platform" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTSUD-yvLx-eKSON9BpZTISUqByfiUH4eWpiq4l7Oqei-OKK9TIBp7BH2xgfbhm0LhrD9mWZoWthjWvRolWJ5CHEx_JvT4MIKak_qg2L-OxhKxV0omdqT2JsbaBGXJCzsU6SD50IbmTi-6EvTkOdab2P11PV9jk7_qTK9hlcLr1qZIpkHpVLR5C6DNUJxugUql0nuxY3R5ZYqqLaO3RSxMOxnNw11M48WikAPIJu8JUnlzz1luFpn1HtLTCJ2gqQRhMd_TcoUNCGzF"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-8 left-8">
+<h4 class="text-white text-xl font-heading">Olympic Platforms</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-surface-dark relative" id="success">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<h2 class="text-center text-4xl md:text-5xl font-heading font-medium text-white mb-24">Legacies Forged Here</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-card p-10 rounded-3xl border border-white/5 relative">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Member" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8PbTv8OgcLbHF6ebZKzOJsVU0WBDiarSYOiXPfj4ajW4FSVlkpPkOE6iIWmMUwbAUkSazlBjXypsHJS4uBeWtHVQTtkeo2kfNTQYxeeSZaAj8ZPjikfjWAZ0QNiBUoNMGdw2-pgbwwiw-PiIKjCuXtX-g44lzccx7JBs0pOxccTM_spVB6NVjSHYCc6lSKIvjCNTKUVyGwYxyaB26_-2144ZhU9geEyefyltGnZ_aCkptYIk6R74W8I7lUJzdr04wDVP_A2WRvytI"/>
+<div>
+<h4 class="font-bold text-white text-sm">Marcus T.</h4>
+<p class="text-text-muted text-xs uppercase tracking-wide">Pro Bodybuilder</p>
+</div>
+</div>
+<p class="text-gray-400 font-light leading-relaxed text-sm">
+                    "Tauros isn't just a gym, it's a cathedral of iron. The atmosphere here pushed me to add 40lbs to my bench and finally place in regionals."
+                </p>
+</div>
+<div class="bg-surface-card p-10 rounded-3xl border border-primary/20 relative shadow-2xl shadow-black/50 transform md:-translate-y-4">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Member" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5a9zjGQjJph8Xv5Nw-EaCnZMoauvPHB2NCygPWZiw02ArM-kUT8ZjWL3hd2eCEjm5dO1X2gyOgwlJlnzqiADPO68qMSN5o6GmDq-RSOvmiqg0OU86ARNdkhemCG8prvEcQaNs7WT1yU6Xs1-TjS-Mvk484joBLMlukfT46Un4akAYTdqi5Ae66lfNC_-fTtaGdbtUH0srgii8hrSJfmfaqLfRpu-7SsBUK7FAKbppVsh3zYUX0qJ-EgzqgKx2KGRcwQrQeOUDNiqy"/>
+<div>
+<h4 class="font-bold text-white text-sm">Elena R.</h4>
+<p class="text-primary text-xs uppercase tracking-wide">Powerlifter - Age 42</p>
+</div>
+</div>
+<p class="text-gray-300 font-light leading-relaxed text-sm">
+                    "I thought I was 'too old' to start lifting heavy. The Masters program changed my life. Stronger now than I was in my 20s."
+                </p>
+</div>
+<div class="bg-surface-card p-10 rounded-3xl border border-white/5 relative">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Member" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEfa8MctoyKX0LOLlsoooPeyrzxOWem7ZExJcLqS80_73dX1LeRkTCWkg0HKrDq7Figl8qWEaiqY-BJG0jh98sAXzWeq-6wHiRQ0_eEjRW-BNW4IP4FN5j7yHQvhbS9MK-yoKAFax12g8pC7yAjO0DCIk2S7AE3troX_OVhYef8szQ-mVuL8UHaPIulqL8_o9Q9yaQdybrZwf-sOvqUOws8dCxTE8zID0lG7RhTfmLE38-tOtp2ox05vnhh0v84jlFpq-NRqnumLYO"/>
+<div>
+<h4 class="font-bold text-white text-sm">David K.</h4>
+<p class="text-text-muted text-xs uppercase tracking-wide">Rehabilitation</p>
+</div>
+</div>
+<p class="text-gray-400 font-light leading-relaxed text-sm">
+                    "After my knee surgery, I needed careful guidance. The coaches here are knowledgeable professionals who got me back on track."
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 relative overflow-hidden" id="contact">
+<div class="absolute inset-0 z-0">
+<img alt="Gym weights dark" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWvUUXPgFrio0rwgV3ySIjb_-vJlN1AT8alNMSsl_m2JaZoAPGM4oHhh-iq3cwlYyMsZpVeAwll-c1-51MttmNqAmkzJimXxQqhdiKTClWgeCsHpsupVUSHoj9AnAd9EZgFHKN1D6Oqaiozw1UnB0admUSax7sn_ZkZvZNdTLJ3WpffIvUo1E_7NL6Oybd67C0MdROe91YE_BNdK7OHM2_lXcTVBeywJ4fIMoXLiAraVq4UCyaKxsm2oLkEWLYzTP61mqU3lCe812Q"/>
+<div class="absolute inset-0 bg-background-dark/90"></div>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
+<h2 class="text-4xl md:text-6xl font-heading font-medium text-white mb-6">The Iron Awaits</h2>
+<p class="text-text-muted text-lg mb-10 font-light">
+            Don't wait for motivation. Cultivate discipline. Start your legacy today.
+        </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-1 rounded-full px-6 py-4 bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm" placeholder="Email Address" type="email"/>
+<button class="rounded-full bg-white text-black hover:bg-gray-200 font-bold text-sm px-8 py-4 transition-all duration-300" type="submit">
+                Join
+            </button>
+</form>
+<p class="mt-8 text-gray-600 text-xs tracking-widest uppercase">Limited availability.</p>
+</div>
+</section>
+<footer class="bg-black text-white pt-24 pb-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Tauros Logo Small" class="h-8 w-8 object-contain brightness-0 invert opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUnAjgsi6_XavZ_hWPRnLCQd4xpuH2J6H6_suxFygdx9-YpX6UVcIpQIDJ8vaBGRGJYkmqgd3EuywoKXr0V6foW49EqS9dkYQxMnqjsAkUeTTwfVw6FB2ky9woROaAOmDOGKdYbchdll16zy7mVhGfSpum_CXvm5SdiOWN3K_i_p13Ricku94oZ2MG5XYaVSBuVIZNg5T920CforSsEQxrXeomttnxOjPioOsomBRAmidtSHiiC7lm8cQl5G8Z9ZkseDjYp8_bz8tf"/>
+<span class="font-display font-bold text-lg tracking-[0.1em] text-white">TAUROS</span>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed font-light mb-6">
+                    Forging bodies and minds since 2010. 
+                </p>
+<div class="flex gap-4 opacity-50">
+<a class="hover:text-white transition-colors" href="#"><span class="text-xs font-bold">FB</span></a>
+<a class="hover:text-white transition-colors" href="#"><span class="text-xs font-bold">IG</span></a>
+<a class="hover:text-white transition-colors" href="#"><span class="text-xs font-bold">TW</span></a>
+</div>
+</div>
+<div class="md:col-start-3">
+<h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Navigation</h4>
+<ul class="space-y-3 text-sm text-gray-500 font-light">
+<li><a class="hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="hover:text-white transition-colors" href="#programs">Programs</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Coaches</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Contact</h4>
+<ul class="space-y-3 text-sm text-gray-500 font-light">
+<li>1200 Ironworks Blvd<br/>Metro City, ST 90210</li>
+<li>(555) 123-4567</li>
+<li>strength@taurosgym.com</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+<p>© 2023 Tauros Strength.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
