@@ -15,7 +15,7 @@ export default function Navbar() {
         >
           Testimonios
         </Link>
-        <div className="border border-[#E8B44F] rounded-lg p-2 hover:bg-[#E8B44F]/10 transition-colors">
+        <div className=" p-2 ">
           <Link
             className="cursor-pointer text-[#E8B44F] font-semibold"
             href="/#action-whatsapp"
