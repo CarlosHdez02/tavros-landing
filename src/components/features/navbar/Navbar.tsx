@@ -1,28 +1,37 @@
+"use client";
 import Link from "next/link";
+import React from "react";
+import MobileMenu from "./HamburgerMenu";
 
 export default function Navbar() {
+  const [open, setOpen] = React.useState<boolean>(false);
+
   return (
-    <nav className="flex flex-wrap items-center gap-x-8">
-      <Link
-        className="cursor-pointer text-[#E8B44F] hover:text-[#c99a40] transition-colors font-medium text-lg"
-        href="/programs"
-      >
-        Programas
-      </Link>
-      <Link
-        className="cursor-pointer text-[#E8B44F] hover:text-[#c99a40] transition-colors font-medium text-lg"
-        href="/stories"
-      >
-        Testimonios
-      </Link>
-      <div className="border border-[#E8B44F] rounded-lg p-2 hover:bg-[#E8B44F]/10 transition-colors">
+    <>
+      <nav className="hidden sm:flex flex-wrap items-center gap-x-8">
         <Link
-          className="cursor-pointer text-[#E8B44F] font-semibold"
-          href="/join"
+          className="cursor-pointer text-[#E8B44F] hover:text-[#c99a40] transition-colors font-medium text-lg"
+          href="/#testimonials"
         >
-          Ser una persona de poder
+          Testimonios
         </Link>
-      </div>
-    </nav>
+        <div className="border border-[#E8B44F] rounded-lg p-2 hover:bg-[#E8B44F]/10 transition-colors">
+          <Link
+            className="cursor-pointer text-[#E8B44F] font-semibold"
+            href="/#action-whatsapp"
+          >
+            Ser una persona de poder
+          </Link>
+        </div>
+      </nav>
+
+      <button
+        className="md:hidden text-[#E8B44F] text-2xl"
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        {open ? "✕" : "☰"}
+      </button>
+      <MobileMenu open={open} onClose={() => setOpen(false)} />
+    </>
   );
 }

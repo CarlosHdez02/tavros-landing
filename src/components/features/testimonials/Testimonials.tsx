@@ -4,7 +4,7 @@ import Testimonial from "./Testimonial";
 
 export default function Testimonials() {
   return (
-    <div className="flex flex-col gap-16 relative">
+    <div id="testimonials" className="flex flex-col gap-16 relative">
       {/* Section Header */}
       <div className="flex flex-col items-center gap-6">
         {/* Decorative top element */}

@@ -3,14 +3,14 @@ import Navbar from "@/components/features/navbar/Navbar";
 import PromotionCards from "@/components/features/promotion-cards/Promotion-cards";
 import Testimonials from "@/components/features/testimonials/Testimonials";
 import Image from "next/image";
-import ActionEmail from "@/components/features/action-email/Action-email";
+import ActionEmail from "@/components/features/action-email/ActionWhatsAppCall";
 import tavrosLogo from "@/assets/tavros_logo.jpeg";
 import Philosophy from "@/components/features/philosophy/Philosopy";
 import Hero from "@/components/features/hero/Hero";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full flex flex-col bg-black">
+    <main className="overflow-x-hidden min-h-screen w-full flex flex-col bg-black">
       {/* Header Section - Floating transparent header */}
       <div className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -63,23 +63,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Action Email Section - Rich gradient with glow */}
-      <section className="w-full bg-gradient-to-br from-zinc-950 via-zinc-900 to-black py-24 border-y border-[#E8B44F]/30 relative overflow-hidden">
-        {/* Radial glow from center */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(232,180,79,0.15)_0%,transparent_70%)]" />
-
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-[#E8B44F]/10 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-[#E8B44F]/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        />
-
-        <div className="container mx-auto px-4 relative z-10">
-          <ActionEmail />
-        </div>
+      <section className="w-full">
+        <ActionEmail />
       </section>
-
       {/* Footer Section - Solid dark with top border */}
       <div className="bg-zinc-950 border-t border-[#E8B44F]/20 relative">
         {/* Subtle top glow */}
